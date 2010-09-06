@@ -213,7 +213,7 @@ class Harvest(object):
         setattr( self, klass.plural_name, _get_items )
 
     def find_user(self, first_name, last_name):
-        for person in h.users():
+        for person in self.users():
             if first_name.lower() in person.first_name.lower() and last_name.lower() in person.last_name.lower():
                 return person
 
